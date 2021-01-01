@@ -16,6 +16,17 @@ Ao atribuir tipos as variáveis, o typescript faz advertências em tempo real. E
 
 Orientação a Objetos é um paradigma da programação que tratar trechos de códigos como objetos do mundo real.
 
+## Herança
+
+Uma classe só pode herdar caracteristicas de 1 unica outra classe. Não é possível 1 classe herdar características de várias classes.
+
+- Classes filhas não podem fazer alterações em atributos privados de classes pais/mães.
+- `Protected` permite que classes filhas façam alterações em atributos privados de classes pais/mães.
+
+## Polimorfismo
+
+Permite a sobre escrita de métodos para que as classes filhas tenham liberdade para definir o seu próprio comportamento (conteúdo de seus métodos) com base nos comportamentos de das classes pais. 
+
 ## Código
 
 ``` javascript
