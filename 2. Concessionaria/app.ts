@@ -23,26 +23,26 @@ class Carro {
 
 class Concessionaria {
     private endereco: string
-    private listaDeCarros: any
+    private listaDeCarros: Array<Carro>
 
-    constructor(endereco: string) {
+    constructor(endereco: string, listaDeCarros: Array<Carro>) {
         this.endereco = endereco;
+        this.listaDeCarros = listaDeCarros;
     }
 
     public fornecerEndereco(): string {
         return this.endereco;
     }
 
-    public mostrarListaDeCarros(): any {
+    public mostrarListaDeCarros(): Array<Carro> {
         return this.listaDeCarros;
     }
 };
 
 class Pessoa {
-
-    private nome: string
-    private carroPreferido: string
-    private carro: any
+    private nome: string;
+    private carroPreferido: string;
+    private carro: Carro;
 
     constructor(nome: string, carroPreferido: string) {
         this.nome = nome;
@@ -57,26 +57,37 @@ class Pessoa {
         return this.carroPreferido;
     }
 
-    public comprarCarro(carro: any): void {
+    public comprarCarro(carro: Carro): void {
         this.carro = carro;
     }
 
-    public dizerCarroQueTem(): any {
+    public dizerCarroQueTem(): Carro {
         return this.carro;
     }
 }
-
-let concessionaria = new Concessionaria("Av. Gomes de Matos");
-console.log(concessionaria);
-
-let carro = new Carro('Palio', 2);
-console.log(carro);
-
-let pessoa = new Pessoa("José", "Ferrari");
-console.log(pessoa);
 
 let ola = (texto: string) => {
     console.log(texto)
 }
 
 ola("Hello World");
+
+/* --- criar carros --- */
+let carroA = new Carro('HB20', 4);
+let carroB = new Carro('Celta', 4);
+let carroC = new Carro('Palio', 2);
+
+/* --- criar concessionaria --- */
+let listaDeCarros: Array<Carro> = [carroA, carroB, carroC]
+let concessionaria = new Concessionaria("Av. Gomes de Matos", listaDeCarros);
+
+/* --- criar pessoas --- */
+let cliente = new Pessoa("José", "Celta");
+
+concessionaria.mostrarListaDeCarros().map((carro: Carro) => {
+    
+    if (carro['modelo'] == cliente.dizerCarroPreferido())
+        cliente.comprarCarro(carro);
+});
+
+console.log(cliente.dizerCarroQueTem());

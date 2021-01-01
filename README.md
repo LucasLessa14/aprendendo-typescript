@@ -12,19 +12,13 @@ No javascript, o tipo da variável se adapta com base no tipo do dado que é atr
 
 ## Verificação Estática
 
----
-
 Ao atribuir tipos as variáveis, o typescript faz advertências em tempo real. Ele não permite que você atribua um valor com tipo diferente a uma variável.
 
 ## Suporte a Classes e Interfaces
 
----
-
 Orientação a Objetos é um paradigma da programação que tratar trechos de códigos como objetos do mundo real.
 
 ## Código
-
----
 
 ``` javascript
 npm install -g typescript
