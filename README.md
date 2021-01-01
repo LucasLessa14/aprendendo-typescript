@@ -27,6 +27,10 @@ Uma classe só pode herdar caracteristicas de 1 unica outra classe. Não é poss
 
 Permite a sobre escrita de métodos para que as classes filhas tenham liberdade para definir o seu próprio comportamento (conteúdo de seus métodos) com base nos comportamentos de das classes pais. 
 
+## Interfaces
+
+- Interfaces não devem ter lógica, elas devem ter só os requisitos que as classes que a implementarem devem possuir.
+
 ## Código
 
 ``` javascript
