@@ -1,4 +1,4 @@
-# TypeScript
+# TypeScript - Anotações
 
 O que é TypeScript?
 ---
